@@ -17,6 +17,26 @@ public class SE_ass {
     /**
      * @param args the command line arguments
      */
+
+
+//------------------------------------------Function prime_num
+	public static void prime_num (char[] arr) {
+		int max=1000;
+		System.out.print("\nPrime number : ");
+		for(int i=0;i<arr.length;i++) {
+			for(int j=2;j<max;j++) {
+				if((Character.getNumericValue(arr[i]))==1) {
+					break;
+				}else if((Character.getNumericValue(arr[i]))%j==0 && (Character.getNumericValue(arr[i]))!=j) {
+					break;
+				}else if(j==max-1) {
+					System.out.print((Character.getNumericValue(arr[i]))+" ");
+				}
+			}
+		}
+		System.out.print("\n=================================\n");
+	}
+	//--------------------------------------------------------------
 	 public static void maximum3Elements(int arr[] ) {
 		int max1 = Integer.MIN_VALUE;
 		int max2 = Integer.MIN_VALUE;
@@ -115,6 +135,11 @@ public class SE_ass {
              Get_Average(arr);
               break;
             }
+           case 16:
+                {
+                	prime_num(arr);
+                    break;
+                }
                 case 18:
                      most_repeated(arr);
                   Get_Average(arr);
