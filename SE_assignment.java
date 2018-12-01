@@ -61,7 +61,7 @@ public class SE_ass {
                     break;
                 case 1:
                 {
-                    // call your func. here
+                    Get_Average(arr);
                     break;
                 }case 2:
                 {
@@ -81,6 +81,18 @@ public class SE_ass {
             
         }while(choice != 0);
         
+    
+    }
+ public static void Get_Average(char arr[])
+    {
+       //Ahmed Yassin
+        //20160041
+       double sum=0;
+      double v=0;
+       for(int i=0;i<arr.length;i++)
+           sum+=Character.getNumericValue(arr[i]);
+          v=sum/arr.length;
+       System.out.println(" Average = " +v);
     
     }
 }
