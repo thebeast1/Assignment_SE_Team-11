@@ -25,8 +25,19 @@ public class SE_ass {
     /**
      * @param args the command line arguments
      */
+//------------------------------------------Function Zero_if_less_than_zero
 
-
+public static Integer Zero_if_less_than_zero(Integer []x)
+{
+    for(int i=0; i<x.length; i++)
+    {
+        if(x[i]<0)
+        {
+            x[i]=0;
+        }
+    }
+    return x;
+}
 //------------------------------------------Function prime_num
 	public static void prime_num (char[] arr) {
 		int max=1000;
@@ -168,6 +179,15 @@ public class SE_ass {
                 {
                 	prime_num(arr);
                     break;
+                }
+
+                case 17:
+                {
+                   /* for (int i=0; i<arri.length; i++)
+                    {
+                      System.out.print( Zero_if_less_than_zero(arri)[i] + " ");
+                    }
+                    */
                 }
           case 18:
                 {
