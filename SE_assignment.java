@@ -61,7 +61,12 @@ public class SE_ass {
                     break;
                 case 1:
                 {
-                    Get_Average(arr);
+
+                   
+
+                    // call your func. here
+                    most_repeated(arr);
+
                     break;
                 }case 2:
                 {
@@ -76,6 +81,14 @@ public class SE_ass {
                     // call your func. here
                     break;
                 }
+          case 14:
+            {
+             Get_Average(arr);
+              break;
+            }
+                case 18:
+                     most_repeated(arr);
+                     break;
                 
             }
             
@@ -83,6 +96,7 @@ public class SE_ass {
         
     
     }
+
  public static void Get_Average(char arr[])
     {
        //Ahmed Yassin
@@ -93,6 +107,26 @@ public class SE_ass {
            sum+=Character.getNumericValue(arr[i]);
           v=sum/arr.length;
        System.out.println(" Average = " +v);
+ }
+    public static void most_repeated(char[]x)
+    {
+        int count=0;
+        int a=0;
+        char greater='0';
+        for(int q=0;q<x.length;q++)
+        {
+        for(int j=0;j<x.length;j++)
+        {
+        if(x[q]==x[j])
+         {count++;}
+       }
+       if(count>a)
+       { a=count;
+         greater=x[q];
+       }count=0;
+           }
+        System.out.println("The most repeated value is: "+greater);
+
     
     }
 }
