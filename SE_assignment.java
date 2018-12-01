@@ -73,7 +73,7 @@ public class SE_ass {
                     break;
                 }case 4:
                 {
-                    // call your func. here
+                    get_largest_Prime(arr);
                     break;
                 }
                 
@@ -82,5 +82,20 @@ public class SE_ass {
         }while(choice != 0);
         
     
+    }
+    public static void get_largest_Prime(int[]arr)
+    {
+        int max=0;
+        for(int i=0;i<arr.length;i++)
+        {for(int j=2;j<arr[i];j++)
+        {
+            if (arr[i]%j!=0 &&arr[i]>max)
+            {
+                max=arr[i];
+            }
+        }
+        }
+        System.out.println("the maximum prime number is "+max);
+
     }
 }
