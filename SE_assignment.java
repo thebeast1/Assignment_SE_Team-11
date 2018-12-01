@@ -75,12 +75,51 @@ public class SE_ass {
                 {
                     // call your func. here
                     break;
-                }
+                }case 5:
+		{
+		    Get_Smallest_Prime();
+		    break;
+		}
+
                 
             }
             
         }while(choice != 0);
         
     
+    }
+
+    static boolean isPrime(int n) {
+        if (n%2==0&&n!=2) return false;
+        for(int i=3;i*i<=n;i+=2) {
+            if(n%i==0)
+                return false;
+        }
+        return true;
+    }
+    public static void Get_Smallest_Prime()
+    {
+	//Ahmed Gamal Mohamed Aly
+	//20160010
+  	    System.out.println("Please Enter size of arr: ");
+            int sz;
+            Scanner in = new Scanner(System.in);
+            sz = in.nextInt();
+            ArrayList<Integer>arr=new  ArrayList<Integer>();
+            System.out.println("Enter array elements");
+            for (int i = 0 ; i<sz; ++i)
+	    {
+            	int n = in.nextInt();
+           	 arr.add(n);
+	    }
+    	arr.sort(null);
+       for(int i=0;i<arr.size();i++)	
+       {
+    	   if (isPrime(arr.get(i)))
+    	   {    		   
+    		   System.out.println("Smallest Prime is : "+arr.get(i));
+    		   break;
+    	   }
+       }
     }
 }
