@@ -1,0 +1,9 @@
+all team member should change functions to take an integr array and return integer array 
+not print (return print in main)
+execpt function 6 & 9 & 10 
+should take char and return char
+because if we insert an negetive number or number two digit it will give us errors
+like in function 14 we should insert an negetive numbers 
+and in function execution we will turn arr int to char for the 3 function (6&9&10)
+.........
+please do this fast as you can ..
