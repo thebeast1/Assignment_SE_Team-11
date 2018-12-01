@@ -17,6 +17,35 @@ public class SE_ass {
     /**
      * @param args the command line arguments
      */
+	 public static void maximum3Elements(int arr[] ) {
+		int max1 = Integer.MIN_VALUE;
+		int max2 = Integer.MIN_VALUE;
+		int max3 = Integer.MIN_VALUE; 
+		
+		for (int i = 0; i < arr.length; i++) {
+		    if (arr[i] > max1) {
+		        max3 = max2;
+		        max2 = max1;
+		        max1 = arr[i];
+		    } else if (arr[i] > max2) {
+		        if (max1 == arr[i]) {
+		            
+		        } else {
+		            max3 = max2;
+		            max2 = arr[i];
+		        }
+		    } else if (arr[i] > max3) {
+		        if (max1 == arr[i] || max2 ==arr[i]) {
+		           
+		        } else {
+		            max3 = arr[i];
+		        }
+		    }
+		}
+		System.out.println("Maximum 1 =>> "+max1+"\n");
+		System.out.println("Maximum 2 =>> "+max2+"\n");
+		System.out.println("Maximum 3 =>> "+max3+"\n");
+	}
     public static void main(String[] args) {
         // TODO code application logic here
         int choice =0;
