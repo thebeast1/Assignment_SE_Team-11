@@ -17,28 +17,34 @@ public class SE_ass {
     /**
      * @param args the command line arguments
      */
-	 public static void maximum3Elements(int arr[] ) {
+	 public static void maximum3Elements(char arr[] ) {
 		int max1 = Integer.MIN_VALUE;
 		int max2 = Integer.MIN_VALUE;
 		int max3 = Integer.MIN_VALUE; 
 		
-		for (int i = 0; i < arr.length; i++) {
-		    if (arr[i] > max1) {
+		int arr1[]= new int[arr.length];
+		
+		for(int j=0;j<arr.length;j++){
+			arr1[j]=Integer.parseInt(String.valueOf(arr[j]));
+					}
+		
+		for (int i = 0; i < arr1.length; i++) {
+		    if (arr1[i] > max1) {
 		        max3 = max2;
 		        max2 = max1;
-		        max1 = arr[i];
-		    } else if (arr[i] > max2) {
-		        if (max1 == arr[i]) {
+		        max1 = arr1[i];
+		    } else if (arr1[i] > max2) {
+		        if (max1 == arr1[i]) {
 		            
 		        } else {
 		            max3 = max2;
-		            max2 = arr[i];
+		            max2 = arr1[i];
 		        }
-		    } else if (arr[i] > max3) {
-		        if (max1 == arr[i] || max2 ==arr[i]) {
+		    } else if (arr1[i] > max3) {
+		        if (max1 == arr1[i] || max2 ==arr1[i]) {
 		           
 		        } else {
-		            max3 = arr[i];
+		            max3 = arr1[i];
 		        }
 		    }
 		}
@@ -110,6 +116,11 @@ public class SE_ass {
                     // call your func. here
                     break;
                 }
+				case 13:
+            {
+             maximum3Elements(arr);
+              break;
+            }
           case 14:
             {
              Get_Average(arr);
