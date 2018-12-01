@@ -25,7 +25,31 @@ public class SE_ass {
     /**
      * @param args the command line arguments
      */
+//***************************Function get median ******************************//
+    public void getMedian(char arr[])
+    {
+        double median=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            char temp;
+            for (int j = i; j > 0; j--)
+            {
+                if (arr[j] < arr[j - 1])
+                {
+                    temp = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = temp;
+                }
+            }
+        }
+        if (arr.length % 2 == 0)
+            median = ((double)Character.getNumericValue(arr[arr.length/2]) + (double)Character.getNumericValue(arr[arr.length/2 - 1]))/2;
+        else
+            median =  Character.getNumericValue(arr[arr.length/2]);
 
+        System.out.println("the median is : " + median);
+
+    }
 
 //------------------------------------------Function prime_num
 	public static void prime_num (char[] arr) {
@@ -163,6 +187,11 @@ public class SE_ass {
              Get_Average(arr);
               break;
             }
+                case 15:
+                {
+                    getMedian(arr);
+                    break;
+                }
 
            case 16:
                 {
