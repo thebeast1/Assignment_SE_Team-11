@@ -83,7 +83,7 @@ public class SE_ass {
         
     
     }
-    public static void get_largest_Prime(int[]arr)
+    public static void get_largest_Prime(char[]arr)
     {
         int max=0;
         for(int i=0;i<arr.length;i++)
