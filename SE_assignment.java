@@ -148,7 +148,8 @@ public class SE_ass {
            sum+=Character.getNumericValue(arr[i]);
           v=sum/arr.length;
        System.out.println(" Average = " +v);
- }
+    
+    }
     public static void most_repeated(char[]x)
     {
         int count=0;
