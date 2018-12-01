@@ -14,6 +14,14 @@ import java.util.*;
  */
 public class SE_ass {
 
+    
+
+/**
+ *
+ * @author Team 11.
+ */
+
+
     /**
      * @param args the command line arguments
      */
@@ -96,10 +104,7 @@ public class SE_ass {
                     break;
                 case 1:
                 {
-
-                   
-
-                    // call your func. here
+                     // call your func. here
                     most_repeated(arr);
 
                     break;
@@ -114,9 +119,21 @@ public class SE_ass {
                 }case 4:
                 {
                     // call your func. here
+  
+		break;
+                }case 5:
+                {
+                    // call your func. here
                     break;
                 }
-				case 13:
+                case 6:
+                {
+                    // call your func. here
+                    Shift_Array(arr); 
+                    break;
+                }
+                
+	case 13:
             {
              maximum3Elements(arr);
               break;
@@ -126,17 +143,43 @@ public class SE_ass {
              Get_Average(arr);
               break;
             }
-                case 18:
-                     most_repeated(arr);
+          case 18:
+                {
+                 maximum3Elements(arr);
+                  most_repeated(arr);
                   Get_Average(arr);
-                     break;
+                  Shift_Array(arr);
+                  break;
                 
             }
+        }
             
         }while(choice != 0);
-        
-    
     }
+    
+        //20160204 Shift Array
+    public static void Shift_Array(char arr[])
+    {
+        //Mohamed Reda
+        //20160204
+        char first = arr[0];
+        for(int i=0;i<arr.length-1;i++)
+        {
+            arr[i]=arr[i+1];
+        }
+       arr[arr.length-1]=first;
+       String s = "";
+        for(int i=0;i<arr.length;i++)
+        {
+            s+=arr[i] +"";
+            
+        }
+       System.out.println("The Shifted array is: " + s);
+    }
+
+    
+
+
 
  public static void Get_Average(char arr[])
     {
