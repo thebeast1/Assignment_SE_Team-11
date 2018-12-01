@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//package se_ass;
+package se_ass;
 
 import java.io.*; 
 import java.util.*; 
@@ -12,9 +12,13 @@ import java.util.*;
  *
  * @author Team 11.
  */
-//SE_ass
-public class t1 {
-	//------------------------------------------Function prime_num
+public class SE_ass {
+
+    /**
+     * @param args the command line arguments
+     */
+
+//------------------------------------------Function prime_num
 	public static void prime_num (char[] arr) {
 		int max=1000;
 		System.out.print("\nPrime number : ");
@@ -32,9 +36,6 @@ public class t1 {
 		System.out.print("\n=================================\n");
 	}
 	//--------------------------------------------------------------
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         // TODO code application logic here
         int choice =0;
@@ -93,7 +94,8 @@ public class t1 {
                 {
                     // call your func. here
                     break;
-                }case 16:
+                }
+                case 16:
                 {
                 	prime_num(arr);
                     break;
