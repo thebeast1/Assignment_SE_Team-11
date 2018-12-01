@@ -129,6 +129,7 @@ public class SE_ass {
                 case 18:
                      most_repeated(arr);
                   Get_Average(arr);
+			maximum3Elements(arr);
                      break;
                 
             }
