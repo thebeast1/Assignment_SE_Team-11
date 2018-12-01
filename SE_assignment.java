@@ -74,13 +74,49 @@ public class SE_ass {
                 }case 4:
                 {
                     // call your func. here
+  
+					break;
+                }case 5:
+                {
+                    // call your func. here
+                    break;
+                }
+                case 6:
+                {
+                    // call your func. here
+                    Shift_Array(arr); 
+                    break;
+                }
+                case 18:
+                {
+                    // call your func. here
+                    Shift_Array(arr); 
+                    
                     break;
                 }
                 
             }
             
         }while(choice != 0);
-        
-    
     }
+    
+        //20160204 Shift Array
+    public static void Shift_Array(char arr[])
+    {
+        //Mohamed Reda
+        //20160204
+        char first = arr[0];
+        for(int i=0;i<arr.length-1;i++)
+        {
+            arr[i]=arr[i+1];
+        }
+       arr[arr.length-1]=first;
+       
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.println("The array is: " + arr[i]);
+        }
+       
+    }
+    
 }
