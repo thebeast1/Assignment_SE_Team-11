@@ -14,9 +14,72 @@ import java.util.*;
  */
 public class SE_ass {
 
+    
+
+/**
+ *
+ * @author Team 11.
+ */
+
+
     /**
      * @param args the command line arguments
      */
+
+
+//------------------------------------------Function prime_num
+	public static void prime_num (char[] arr) {
+		int max=1000;
+		System.out.print("\nPrime number : ");
+		for(int i=0;i<arr.length;i++) {
+			for(int j=2;j<max;j++) {
+				if((Character.getNumericValue(arr[i]))==1) {
+					break;
+				}else if((Character.getNumericValue(arr[i]))%j==0 && (Character.getNumericValue(arr[i]))!=j) {
+					break;
+				}else if(j==max-1) {
+					System.out.print((Character.getNumericValue(arr[i]))+" ");
+				}
+			}
+		}
+		System.out.print("\n=================================\n");
+	}
+	//--------------------------------------------------------------
+	 public static void maximum3Elements(char arr[] ) {
+		int max1 = Integer.MIN_VALUE;
+		int max2 = Integer.MIN_VALUE;
+		int max3 = Integer.MIN_VALUE; 
+		
+		int arr1[]= new int[arr.length];
+		
+		for(int j=0;j<arr.length;j++){
+			arr1[j]=Integer.parseInt(String.valueOf(arr[j]));
+					}
+		
+		for (int i = 0; i < arr1.length; i++) {
+		    if (arr1[i] > max1) {
+		        max3 = max2;
+		        max2 = max1;
+		        max1 = arr1[i];
+		    } else if (arr1[i] > max2) {
+		        if (max1 == arr1[i]) {
+		            
+		        } else {
+		            max3 = max2;
+		            max2 = arr1[i];
+		        }
+		    } else if (arr1[i] > max3) {
+		        if (max1 == arr1[i] || max2 ==arr1[i]) {
+		           
+		        } else {
+		            max3 = arr1[i];
+		        }
+		    }
+		}
+		System.out.println("Maximum 1 =>> "+max1+"\n");
+		System.out.println("Maximum 2 =>> "+max2+"\n");
+		System.out.println("Maximum 3 =>> "+max3+"\n");
+	}
     public static void main(String[] args) {
         // TODO code application logic here
         int choice =0;
@@ -61,7 +124,9 @@ public class SE_ass {
                     break;
                 case 1:
                 {
-                    // call your func. here
+                     // call your func. here
+                    most_repeated(arr);
+
                     break;
                 }case 2:
                 {
@@ -73,29 +138,132 @@ public class SE_ass {
                     break;
                 }case 4:
                 {
+
                     get_largest_Prime(arr);
+                    // call your func. here
+  
+		break;
+                }case 5:
+                {
+                    // call your func. here
+                    break;
+                }
+                case 6:
+                {
+                    // call your func. here
+                    Shift_Array(arr); 
                     break;
                 }
                 
+	case 13:
+            {
+             maximum3Elements(arr);
+              break;
             }
+          case 14:
+            {
+             Get_Average(arr);
+              break;
+            }
+
+           case 16:
+                {
+                	prime_num(arr);
+                    break;
+                }
+          case 18:
+                {
+                 maximum3Elements(arr);
+                  most_repeated(arr);
+                  prime_num(arr);
+                  Get_Average(arr);
+                    get_largest_Prime(arr);
+                  Shift_Array(arr);
+                  break;
+                
+            }
+        }
             
         }while(choice != 0);
-        
+    }
+    
+        //20160204 Shift Array
+    public static void Shift_Array(char arr[])
+    {
+        //Mohamed Reda
+        //20160204
+        char first = arr[0];
+        for(int i=0;i<arr.length-1;i++)
+        {
+            arr[i]=arr[i+1];
+        }
+       arr[arr.length-1]=first;
+       String s = "";
+        for(int i=0;i<arr.length;i++)
+        {
+            s+=arr[i] +"";
+            
+        }
+       System.out.println("The Shifted array is: " + s);
+    }
+
+    
+
+
+
+ public static void Get_Average(char arr[])
+    {
+       //Ahmed Yassin
+        //20160041
+       double sum=0;
+      double v=0;
+       for(int i=0;i<arr.length;i++)
+           sum+=Character.getNumericValue(arr[i]);
+          v=sum/arr.length;
+       System.out.println(" Average = " +v);
     
     }
-    public static void get_largest_Prime(char[]arr)
+    public static void most_repeated(char[]x)
     {
-        int max=0;
-        for(int i=0;i<arr.length;i++)
-        {for(int j=2;j<arr[i];j++)
+        int count=0;
+        int a=0;
+        char greater='0';
+        for(int q=0;q<x.length;q++)
         {
-            if (arr[i]%j!=0 &&arr[i]>max)
+        for(int j=0;j<x.length;j++)
+        {
+        if(x[q]==x[j])
+         {count++;}
+       }
+       if(count>a)
+       { a=count;
+         greater=x[q];
+       }count=0;
+           }
+        System.out.println("The most repeated value is: "+greater);
+
+    
+    }
+  public static void get_largest_Prime(char[]arr)
+    {
+        int array [] = new int [arr.length];
+        for(int i=0;i<arr.length;i++)
+        {
+            array[i]=(int) (arr[i]%48);
+        }
+        
+        int max=0;
+        for(int i=0;i<array.length;i++)
+        {for(int j=2;j<array[i];j++)
             {
-                max=arr[i];
+                if (array[i]%j!=0 && array[i]>max)
+                {
+                    max=array[i];
+                }
             }
         }
-        }
         System.out.println("the maximum prime number is "+max);
-
+    
     }
+  
 }
