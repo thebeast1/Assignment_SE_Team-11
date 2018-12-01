@@ -138,6 +138,8 @@ public class SE_ass {
                     break;
                 }case 4:
                 {
+
+                    get_largest_Prime(arr);
                     // call your func. here
   
 		break;
@@ -175,6 +177,7 @@ public class SE_ass {
                   most_repeated(arr);
                   prime_num(arr);
                   Get_Average(arr);
+                    get_largest_Prime(arr);
                   Shift_Array(arr);
                   break;
                 
@@ -241,4 +244,26 @@ public class SE_ass {
 
     
     }
+  public static void get_largest_Prime(char[]arr)
+    {
+        int array [] = new int [arr.length];
+        for(int i=0;i<arr.length;i++)
+        {
+            array[i]=(int) (arr[i]%48);
+        }
+        
+        int max=0;
+        for(int i=0;i<array.length;i++)
+        {for(int j=2;j<array[i];j++)
+            {
+                if (array[i]%j!=0 && array[i]>max)
+                {
+                    max=array[i];
+                }
+            }
+        }
+        System.out.println("the maximum prime number is "+max);
+    
+    }
+  
 }
