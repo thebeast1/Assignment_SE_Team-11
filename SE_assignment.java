@@ -104,6 +104,18 @@ public class SE_ass {
 		System.out.println("Maximum 2 =>> "+max2+"\n");
 		System.out.println("Maximum 3 =>> "+max3+"\n");
 	}
+	public static void check_sort(char arr[] tmep , int s){
+            boolean b = true ;
+            for (int i = 1 ; i < s ; ++i){
+            	if(arr[i] >= arr[i-1]){
+                b = false ;
+                break;
+            }
+            if (b == true)
+                System.out.println("The array is sorted");
+            else
+                System.out.println("The array isn't sorted");
+    	}
     public static void main(String[] args) {
         // TODO code application logic here
         int choice =0;
@@ -182,6 +194,10 @@ public class SE_ass {
                     // call your func. here
                     Shift_Array(arr); 
                     break;
+                }
+case 7:
+                {
+                    check_sort(arr,sz);
                 }
                 
 	case 13:
